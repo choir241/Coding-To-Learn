@@ -1,40 +1,41 @@
 import React from "react";
 import style from "../css/main.module.css";
-import {ButtonLink} from "../components/Button";
+import { ButtonLink, ButtonElement } from "../components/Button";
 
-export default function LandingPage(){
-    return(
-        <main id = "main">
-            <h1>Learn How To Code</h1>
+export default function LandingPage() {
+  const links = [
+    { text: <h3>100 Devs</h3>, href: "/100_Devs" },
+    { text: <h3>Odin Project</h3>, href: "/Odin_Project" },
+    { text: <h3>Free Code Camp</h3>, href: "/Free_Code_Camp" },
+  ];
 
-                <h2>New To Coding?</h2>
+  return (
+    <main id="main">
+      <h1>Learn How To Code</h1>
 
-                <section className = {`${style.course} ${style.flex} ${style.justifyBetween}`}>
-                    {ButtonLink({
-                        href: "/100_Devs",
-                        text: <h3>100Devs</h3>                        
-                    })}
+      <h2>New To Coding?</h2>
 
-                    {ButtonLink({
-                        href: "/Odin_Project",
-                        text: <h3>Odin Project</h3>                        
-                    })}
+      <section
+        className={`${style.course} ${style.flex} ${style.justifyBetween}`}
+      >
+        {links.map((button: ButtonElement) => {
+          const text = button.text;
+          const href = button.href;
+          return ButtonLink({
+            text: text,
+            href: href,
+            key: href,
+          });
+        })}
+      </section>
 
-                    {ButtonLink({
-                        href: "/Free_Code_Camp",
-                        text: <h3>Free Code Camp</h3>                        
-                    })}
-                 
-                </section>
-
-            <section className = {`${style.flex} ${style.alignCenter}`}>
-                <h2>Learn Code Languages</h2> 
-                {ButtonLink({
-                    href: "/Coding_Languages",
-                    text: <i className = {style.arrow}>&rarr;</i>
-                })}
-                
-            </section>
-        </main>
-    )
+      <section className={`${style.flex} ${style.alignCenter}`}>
+        <h2>Learn Code Languages</h2>
+        {ButtonLink({
+          href: "/Coding_Languages",
+          text: <i className={style.arrow}>&rarr;</i>,
+        })}
+      </section>
+    </main>
+  );
 }

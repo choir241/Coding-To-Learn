@@ -58,20 +58,24 @@
 /*Landing Page
 ========================================================================== */
 
-.arrow{
+.arrow {
   color: black;
   margin-left: 1rem;
   background: none;
   border: none;
-  font-size: 5rem;  
+  font-size: 5rem;
 }
 
-.course a{
+.course {
+  margin-bottom: 5rem;
+}
+
+.course a {
   text-align: center;
   min-height: 12rem;
   min-width: 15rem;
   width: 25rem;
-  background: #358AA0;
+  background: #358aa0;
   border: none;
   border-radius: 5px;
 }
@@ -79,8 +83,8 @@
 /*100Devs
 ========================================================================== */
 
-.button{
-  background: #22A9CA;
+.button {
+  background: #22a9ca;
   text-align: center;
   margin-top: 2rem;
   padding: 1rem 2rem;
@@ -91,13 +95,13 @@
 ========================================================================== */
 
 @media (max-width: 800px) {
-  .course{
+  .course {
     flex-direction: column;
     align-items: center;
     min-height: 50rem;
   }
 
-  .button{
+  .button {
     margin-top: 1rem;
   }
 }
