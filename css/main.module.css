@@ -2,86 +2,102 @@
 ========================================================================== */
 
 .flex {
-    display: flex;
-  }
-  
-  .column {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.row {
+  flex-direction: row;
+}
+
+/*JustifyContent
+========================================================================== */
+
+.justifyCenter {
+  justify-content: center;
+}
+
+.justifyEnd {
+  justify-content: flex-end;
+}
+
+.justifyStart {
+  justify-content: flex-start;
+}
+
+.justifyBetween {
+  justify-content: space-between;
+}
+
+.justifyAround {
+  justify-content: space-around;
+}
+
+.justifyEvenly {
+  justify-content: space-evenly;
+}
+
+/*AlignItems
+========================================================================== */
+
+.alignCenter {
+  align-items: center;
+}
+
+.alignEnd {
+  align-items: flex-end;
+}
+
+.alignStart {
+  align-items: flex-start;
+}
+
+/*Landing Page
+========================================================================== */
+
+.arrow{
+  color: black;
+  margin-left: 1rem;
+  background: none;
+  border: none;
+  font-size: 5rem;  
+}
+
+.course a{
+  text-align: center;
+  min-height: 12rem;
+  min-width: 15rem;
+  width: 25rem;
+  background: #358AA0;
+  border: none;
+  border-radius: 5px;
+}
+
+/*100Devs
+========================================================================== */
+
+.button{
+  background: #22A9CA;
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+}
+
+/*Mobile Responsive
+========================================================================== */
+
+@media (max-width: 800px) {
+  .course{
     flex-direction: column;
-  }
-  
-  .row {
-    flex-direction: row;
-  }
-  
-  /*JustifyContent
-  ========================================================================== */
-  
-  .justifyCenter {
-    justify-content: center;
-  }
-  
-  .justifyEnd {
-    justify-content: flex-end;
-  }
-  
-  .justifyStart {
-    justify-content: flex-start;
-  }
-  
-  .justifyBetween {
-    justify-content: space-between;
-  }
-  
-  .justifyAround {
-    justify-content: space-around;
-  }
-  
-  .justifyEvenly {
-    justify-content: space-evenly;
-  }
-  
-  /*AlignItems
-  ========================================================================== */
-  
-  .alignCenter {
     align-items: center;
-  }
-  
-  .alignEnd {
-    align-items: flex-end;
-  }
-  
-  .alignStart {
-    align-items: flex-start;
+    min-height: 50rem;
   }
 
-  /*Landing Page
-  ========================================================================== */
-  
-  .arrow{
-    margin-left: 1rem;
-    background: none;
-    border: none;
-    font-size: 5rem;  
+  .button{
+    margin-top: 1rem;
   }
-
-  .course button{
-    min-height: 12rem;
-    min-width: 15rem;
-    width: 25rem;
-    background: #358AA0;
-    border: none;
-    border-radius: 5px;
-  }
-
-
-  /*Mobile Responsive
-  ========================================================================== */
-  
-  @media (max-width: 800px) {
-    .course{
-      flex-direction: column;
-      align-items: center;
-      min-height: 50rem;
-    }
-  }
+}
