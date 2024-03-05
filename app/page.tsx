@@ -29,13 +29,15 @@ export default function LandingPage() {
         })}
       </section>
 
-      <section className={`${style.flex} ${style.alignCenter}`}>
-        <h2>Learn Code Languages</h2>
-        {ButtonLink({
-          href: "/Coding_Languages",
-          text: <i className={style.arrow}>&rarr;</i>,
-        })}
-      </section>
+      {ButtonLink({
+        href: "/Coding_Languages",
+        text: (
+          <section className={`${style.flex} ${style.alignCenter}`}>
+            <h2>Learn Code Languages</h2>
+            <i className={style.arrow}>&rarr;</i>
+          </section>
+        ),
+      })}
     </main>
   );
 }

@@ -82,7 +82,7 @@ nav ul {
 }
 
 header {
-  padding: 1rem 2rem 1.5rem 1rem;
+  padding: 1rem 2rem 0rem 1rem;
 }
 
 /*Intro to Classes
@@ -101,6 +101,27 @@ header {
   height: 80%;
   width: 60%;
 }
+
+/*Coding Languages
+========================================================================== */
+#coding section div img {
+  width: 45%;
+  height: 20%;
+}
+
+#coding section div {
+  width: 100%;
+}
+
+#coding h1 {
+  margin-bottom: 5rem;
+}
+
+#coding section {
+}
+
+/*Mobile Responsiveness
+========================================================================== */
 
 @media (max-width: 800px) {
   #intro article {
