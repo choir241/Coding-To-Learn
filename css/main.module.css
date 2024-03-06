@@ -91,6 +91,43 @@
   border-radius: 5px;
 }
 
+/*Languages
+========================================================================== */
+
+.colorRow {
+  background-color: rgba(220, 220, 220, 0.25);
+}
+
+.btnContainer {
+  width: 80%;
+  padding-bottom: 2rem;
+}
+
+.headContainer {
+  width: 80%;
+}
+
+/*LanguageHeader
+========================================================================== */
+
+.header {
+  left: -1rem;
+  background: rgba(220, 220, 220, 0.25);
+  position: fixed;
+  z-index: 1;
+  padding-right: 4rem;
+}
+
+.header,
+.header nav,
+.header ul {
+  height: 100%;
+}
+
+.header nav li a {
+  font-size: 1.777rem;
+}
+
 /*Mobile Responsive
 ========================================================================== */
 

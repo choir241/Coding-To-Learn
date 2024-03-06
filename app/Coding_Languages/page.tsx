@@ -8,6 +8,7 @@ import TypeScript from "../../assets/TypeScript.png";
 import Ruby from "../../assets/Ruby.png";
 import Image, { StaticImageData } from "next/image";
 import style from "../../css/main.module.css";
+import { ButtonLink } from "../../components/Button";
 
 export default function Coding_Languages() {
   interface codingInterface {
@@ -38,12 +39,18 @@ export default function Coding_Languages() {
       >
         {codingSection.map((image: codingInterface) => {
           return (
-            <div
-              key={image.text}
-              className={`${style.flex} ${style.column} ${style.alignCenter}`}
-            >
-              <Image src={image.src} alt={image.alt} />
-              <h2>{image.text}</h2>
+            <div key={image.text}>
+              {ButtonLink({
+                text: (
+                  <section
+                    className={`${style.flex} ${style.column} ${style.alignCenter}`}
+                  >
+                    <Image src={image.src} alt={image.alt} />{" "}
+                    <h2>{image.text}</h2>
+                  </section>
+                ),
+                href: `/languages/${image.text}`,
+              })}
             </div>
           );
         })}
@@ -54,12 +61,18 @@ export default function Coding_Languages() {
       >
         {codingSection2.map((image: codingInterface) => {
           return (
-            <div
-              key={image.text}
-              className={`${style.flex} ${style.column} ${style.alignCenter}`}
-            >
-              <Image src={image.src} alt={image.alt} />
-              <h2>{image.text}</h2>
+            <div key={image.text}>
+              {ButtonLink({
+                text: (
+                  <section
+                    className={`${style.flex} ${style.column} ${style.alignCenter}`}
+                  >
+                    <Image src={image.src} alt={image.alt} />{" "}
+                    <h2>{image.text}</h2>
+                  </section>
+                ),
+                href: `/languages/${image.text}`,
+              })}
             </div>
           );
         })}
