@@ -143,3 +143,30 @@
     margin-top: 1rem;
   }
 }
+
+@media (max-width: 1000px) {
+  .menu {
+    display: flex;
+  }
+
+  .show:hover {
+    cursor: pointer;
+  }
+
+  .nav {
+    flex-direction: column;
+  }
+}
+
+/*Menu
+========================================================================== */
+
+.menu,
+.hidden {
+  display: none;
+}
+
+.show {
+  font-size: 2.5rem;
+  display: flex;
+}

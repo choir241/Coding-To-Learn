@@ -21,7 +21,8 @@ a {
 }
 
 body,
-a {
+a,
+svg {
   color: #2b3133;
   font-family: "Roboto", sans-serif;
 }
@@ -36,8 +37,11 @@ html {
 }
 
 body {
-  padding: 0rem 2rem;
   line-height: 1;
+}
+
+main {
+  padding: 0rem 2rem;
 }
 
 h1 {
@@ -121,6 +125,10 @@ header {
 
 #coding h1 {
   margin-bottom: 5rem;
+}
+
+#coding section {
+  margin-bottom: 2rem;
 }
 
 /*Table

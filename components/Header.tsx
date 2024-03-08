@@ -1,5 +1,9 @@
+"use client";
 import { ButtonLink, ButtonElement } from "./Button";
 import style from "../css/main.module.css";
+import { CiMenuBurger } from "react-icons/ci";
+import { useState } from "react";
+import { IoMdClose } from "react-icons/io";
 
 export default function Header() {
   const links = [
@@ -10,10 +14,22 @@ export default function Header() {
     { text: "Languages", href: "/Coding_Languages" },
   ];
 
+  const [toggleNav, setToggleNav] = useState<boolean>(true);
+
   return (
     <header>
-      <nav className={`${style.flex} ${style.justifyCenter}`}>
-        <ul className={`${style.flex} ${style.justifyBetween}`}>
+      <CiMenuBurger
+        className={`${style.menu} ${toggleNav ? style.show : style.hidden}`}
+        onClick={() => setToggleNav(false)}
+      />
+      <IoMdClose
+        className={toggleNav ? style.hidden : style.show}
+        onClick={() => setToggleNav(true)}
+      />
+      <nav
+        className={`${style.flex} ${style.justifyCenter} ${toggleNav ? style.hidden : style.show}`}
+      >
+        <ul className={`${style.flex} ${style.justifyBetween} ${style.nav}`}>
           {links.map((button: ButtonElement) => {
             const text = button.text;
             const href = button.href;
