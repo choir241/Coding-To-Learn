@@ -32,6 +32,9 @@ export default function Python() {
         },
         { name: "Dive Into Python 3", href: "https://diveintopython3.net/" },
       ]}
+      text={
+        "Note: there are currently two versions of Python that are commonly taught and used -- Python 2, and Python 3. Python 3 is the most recent version, but for a variety of reasons Python 2 still is fairly popular among many developers.  If you're not sure which version to pick, my recommendation would be to pick the resource which looks like the best fit for you, and just use whatever version they're recommending. Luckily, the differences between the two are very minor (at least from the perspective of the beginner), so there's really no difference if you learn using Python 2 vs Python 3.  That said, when working on your own programs, I would always pick Python 3 unless you have good reason to otherwise. The Python community, with the exception of a few holdouts, is moving towards Python 3 and abandoning Python 2."
+      }
       h1={"Python"}
     />
   );

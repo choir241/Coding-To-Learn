@@ -8,6 +8,7 @@ interface Resource {
 
 interface LanguageElement {
   h1: string;
+  text?: string;
   resources: Resource[];
 }
 
@@ -21,6 +22,8 @@ export default function Language(props: LanguageElement) {
         <h1>{props.h1}</h1>
       </div>
 
+      {props?.text ? <p>{props.text}</p> : ""}
+
       <table>
         <thead>
           <tr>
@@ -33,7 +36,7 @@ export default function Language(props: LanguageElement) {
           {props?.resources?.map((resource: Resource, i: number) => {
             return (
               <tr
-                key={resource.name}
+                key={`${resource.name} ${resource.href}`}
                 className={i % 2 == 0 ? style.colorRow : ""}
               >
                 <td>

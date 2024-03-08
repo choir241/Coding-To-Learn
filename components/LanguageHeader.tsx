@@ -4,7 +4,7 @@ import { ButtonLink, ButtonElement } from "./Button";
 export default function LanguageHeader() {
   const links = [
     { text: "Home", href: "/" },
-    { text: "C#", href: "/languages/Java" },
+    { text: "C#", href: "/languages/C" },
     { text: "Java", href: "/languages/Java" },
     { text: "PHP", href: "/languages/PHP" },
     { text: "Python", href: "/languages/Python" },

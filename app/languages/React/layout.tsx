@@ -12,7 +12,7 @@ export default function RootLayout({
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Python</title>
+        <title>React</title>
       </head>
       <body>
         <Header />
