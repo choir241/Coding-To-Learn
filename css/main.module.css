@@ -149,20 +149,40 @@
     display: flex;
   }
 
-  .show:hover {
-    cursor: pointer;
-  }
-
   .nav {
     flex-direction: column;
   }
 }
 
+@media (max-width: 1500px) {
+  .headContainer, .btnContainer {
+    width: 100%;
+  }
+  
+
+.header li{
+  margin-bottom: 1rem;
+}
+
+.header{
+  position: relative;
+  background: none;
+}
+
+.header,
+.header nav,
+.header ul{
+  height: auto;
+  width: 100%;
+}
+
+}
+
 /*Menu
 ========================================================================== */
 
-.menu,
-.hidden {
+.hidden,
+.menu {
   display: none;
 }
 

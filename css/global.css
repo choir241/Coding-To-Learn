@@ -137,8 +137,8 @@ header {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-  min-width: 80%;
-  margin: 0 0 2rem 0;
+  min-width: 60%;
+  margin: 0 4rem 2rem 0;
   padding: 0;
   border: 0;
   vertical-align: baseline;
@@ -186,6 +186,10 @@ table tbody td {
   width: 80%;
   line-height: 1.5;
   word-spacing: 0.35rem;
+}
+
+svg:hover {
+  cursor: pointer;
 }
 
 /*Mobile Responsiveness

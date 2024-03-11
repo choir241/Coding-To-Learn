@@ -18,7 +18,7 @@ export default function LanguageHeader() {
     <header className={style.header}>
       <nav>
         <ul
-          className={`${style.flex} ${style.column} ${style.alignStart} ${style.justifyBetween}`}
+          className={`${style.flex} ${style.column} ${style.justifyBetween}`}
         >
           {links.map((lang: ButtonElement) => {
             return (

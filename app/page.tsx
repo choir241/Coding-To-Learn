@@ -1,6 +1,7 @@
 import React from "react";
 import style from "../css/main.module.css";
 import { ButtonLink, ButtonElement } from "../components/Button";
+import Search from "../components/Search";
 
 export default function LandingPage() {
   const links = [
@@ -11,6 +12,7 @@ export default function LandingPage() {
 
   return (
     <main id="main">
+      <Search/>
       <h1>Learn How To Code</h1>
 
       <h2>New To Coding?</h2>

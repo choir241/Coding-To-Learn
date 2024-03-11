@@ -23,7 +23,7 @@ export default function Header() {
         onClick={() => setToggleNav(false)}
       />
       <IoMdClose
-        className={toggleNav ? style.hidden : style.show}
+        className={`${toggleNav ? style.hidden : style.show}`}
         onClick={() => setToggleNav(true)}
       />
       <nav
