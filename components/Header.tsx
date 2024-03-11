@@ -34,7 +34,7 @@ export default function Header() {
             const text = button.text;
             const href = button.href;
             return (
-              <li>
+              <li key={href}>
                 {ButtonLink({
                   key: href,
                   text: text,

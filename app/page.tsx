@@ -12,7 +12,7 @@ export default function LandingPage() {
 
   return (
     <main id="main">
-      <Search/>
+      <Search />
       <h1>Learn How To Code</h1>
 
       <h2>New To Coding?</h2>

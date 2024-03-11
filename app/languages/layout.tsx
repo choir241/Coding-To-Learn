@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import Header from "../../../components/LanguageHeader";
+import Header from "../../components/LanguageHeader";
 
 export default function RootLayout({
   children,
@@ -12,7 +12,7 @@ export default function RootLayout({
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Python</title>
+        <title>Learn How To Code</title>
       </head>
       <body>
         <Header />

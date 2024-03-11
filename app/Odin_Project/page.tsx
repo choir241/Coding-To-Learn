@@ -1,3 +1,4 @@
+"use client";
 import Odin from "../../assets/Odin_Project_Preview.png";
 import IntroClasses from "../../components/Intro_Classes";
 

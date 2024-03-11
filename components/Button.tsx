@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { MouseEvent } from "react";
 
 export interface ButtonElement {
   text: string | JSX.Element;
@@ -9,8 +10,8 @@ export interface ButtonElement {
 
 export function ButtonLink(props: ButtonElement) {
   return (
-    <Link href={props.href} key={props.key} className={props.classNames}>
+    <a href={props.href} key={props.key} className={props.classNames}>
       {props.text}
-    </Link>
+    </a>
   );
 }

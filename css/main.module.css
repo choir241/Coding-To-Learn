@@ -155,27 +155,26 @@
 }
 
 @media (max-width: 1500px) {
-  .headContainer, .btnContainer {
+  .headContainer,
+  .btnContainer {
     width: 100%;
   }
-  
 
-.header li{
-  margin-bottom: 1rem;
-}
+  .header li {
+    margin-bottom: 1rem;
+  }
 
-.header{
-  position: relative;
-  background: none;
-}
+  .header {
+    position: relative;
+    background: none;
+  }
 
-.header,
-.header nav,
-.header ul{
-  height: auto;
-  width: 100%;
-}
-
+  .header,
+  .header nav,
+  .header ul {
+    height: auto;
+    width: 100%;
+  }
 }
 
 /*Menu

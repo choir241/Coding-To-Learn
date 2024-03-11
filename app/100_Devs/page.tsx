@@ -1,3 +1,4 @@
+"use client";
 import HundredDevs from "../../assets/100_Devs_Preview.png";
 import IntroClasses from "../../components/Intro_Classes";
 

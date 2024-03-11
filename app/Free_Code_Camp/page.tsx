@@ -1,3 +1,4 @@
+"use client";
 import Code_Camp from "../../assets/Free_Code_Camp_Preview.png";
 import IntroClasses from "../../components/Intro_Classes";
 

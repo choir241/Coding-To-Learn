@@ -8,10 +8,7 @@
   }
 }
 
-
-
 @media (max-width: 1400px) {
-
   #coding section div img {
     width: 25%;
     height: auto;
@@ -22,14 +19,14 @@
   }
 }
 
-@media (max-width: 1500px){
-  table{
+@media (max-width: 1500px) {
+  table {
     width: 100%;
     margin: 0;
     margin-right: 4rem;
   }
 
-  #language{
+  #language {
     align-items: center;
   }
 }
