@@ -2,35 +2,26 @@
 import Search from "../../components/Search";
 import { useStore } from "../../states/Zustand";
 import { State } from "../../states/ZustandTypes";
-import { useState, useEffect } from "react";
 
-export default function search() {
+export default function SearchResults() {
   const searchResults = useStore((state: State) => state.searchResults);
 
-  const [renderSearchResults, setRenderSearchResults] = useState<
-    React.JSX.Element[]
-  >([]);
-  useEffect(() => {
-    let i = 0;
-
-    setRenderSearchResults(
-      searchResults.map((element: JSX.Element) => {
-        return (
-          <tr key={i++}>
-            <td>{element}</td>
-          </tr>
-        );
-      }),
-    );
-  }, [searchResults]);
+  let i = 0;
 
   return (
     <main>
       <Search />
 
       <table>
-        <thead></thead>
-        <tbody>{renderSearchResults}</tbody>
+        <tbody>
+          {searchResults.map((element: JSX.Element) => {
+            return (
+              <tr key={i++}>
+                <td>{element}</td>
+              </tr>
+            );
+          })}
+        </tbody>
       </table>
     </main>
   );
