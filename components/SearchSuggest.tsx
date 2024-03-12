@@ -12,7 +12,7 @@ function updateSearchSuggests(
   setSearchValue: (e: string) => void,
 ) {
   const searchResults = siteData.filter((content: string) =>
-    content.includes(searchValue),
+    content.toLowerCase().includes(searchValue.toLowerCase()),
   );
 
   const results = searchResults

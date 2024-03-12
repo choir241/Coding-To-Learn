@@ -25,6 +25,22 @@ export function updateSearchResults(searchValue: string) {
   return searchResults
     .map((i: number) => {
       const searchResult = siteData[i].split(".");
+      if (siteData[i].toLowerCase() === searchValue.toLowerCase() && i < 3) {
+        return (
+          <a href={`/${sites[i]}`} key={sites[i]}>
+            {siteData[i]}
+          </a>
+        );
+      } else if (
+        siteData[i].toLowerCase() === searchValue.toLowerCase() &&
+        i >= 3
+      ) {
+        return (
+          <a href={`/languages/${sites[i]}`} key={sites[i]}>
+            {siteData[i]}
+          </a>
+        );
+      }
       return searchResult.map((result: string) => {
         if (result.toLowerCase().includes(searchValue.toLowerCase()) && i < 3) {
           return (

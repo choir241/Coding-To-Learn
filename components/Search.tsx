@@ -23,7 +23,8 @@ export default function Search() {
     <form>
       <input
         type="search"
-        placeholder="search"
+        value={searchValue}
+        placeholder={`${searchValue ? searchValue : "search"}`}
         onChange={(e) => setSearchValue(e.target.value)}
       />
       <button
