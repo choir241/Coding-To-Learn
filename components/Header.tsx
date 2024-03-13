@@ -4,6 +4,7 @@ import style from "../css/main.module.css";
 import { CiMenuBurger } from "react-icons/ci";
 import { useState } from "react";
 import { IoMdClose } from "react-icons/io";
+import Search from "./Search";
 
 export default function Header() {
   const links = [
@@ -18,16 +19,18 @@ export default function Header() {
 
   return (
     <header>
-      <CiMenuBurger
-        className={`${style.menu} ${toggleNav ? style.show : style.hidden}`}
-        onClick={() => setToggleNav(false)}
-      />
-      <IoMdClose
-        className={`${toggleNav ? style.hidden : style.show}`}
-        onClick={() => setToggleNav(true)}
-      />
+      <div className={`${style.flex} ${style.justifyEnd}`}>
+        <CiMenuBurger
+          className={`${style.menu} ${toggleNav ? style.show : style.hidden}`}
+          onClick={() => setToggleNav(false)}
+        />
+        <IoMdClose
+          className={`${toggleNav ? style.hidden : style.show}`}
+          onClick={() => setToggleNav(true)}
+        />
+      </div>
       <nav
-        className={`${style.flex} ${style.justifyCenter} ${toggleNav ? style.hidden : style.show}`}
+        className={`${style.flex} ${style.justifyCenter} ${style.column} ${toggleNav ? style.hidden : style.show}`}
       >
         <ul className={`${style.flex} ${style.justifyBetween} ${style.nav}`}>
           {links.map((button: ButtonElement) => {
@@ -44,6 +47,9 @@ export default function Header() {
             );
           })}
         </ul>
+        <section className={`${style.flex} ${style.justifyEnd}`}>
+          <Search />
+        </section>
       </nav>
     </header>
   );

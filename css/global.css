@@ -88,7 +88,7 @@ nav li {
 }
 
 nav ul {
-  width: 100%;
+  width: auto;
 }
 
 header {
@@ -190,6 +190,69 @@ table tbody td {
 
 svg:hover {
   cursor: pointer;
+}
+
+/*Search
+========================================================================== */
+.searchBar {
+  width: auto;
+}
+
+#search {
+  width: 40%;
+  position: relative;
+}
+
+#suggest {
+  position: absolute;
+  top: 5rem;
+  min-width: 80vw;
+  background: rgb(255, 255, 255);
+}
+
+#search button {
+  background: none;
+  border: none;
+  min-width: 20%;
+}
+
+#suggest button {
+  font-size: 2rem;
+  width: auto;
+  margin: 1rem 0rem 2rem 0rem;
+}
+
+#search .searchBtn {
+  width: 50%;
+}
+
+.searchBar {
+  align-self: flex-end;
+}
+
+#search input {
+  font-size: 2rem;
+  margin-top: 2rem;
+  min-width: 70%;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+/*SearchResults
+========================================================================== */
+
+#searchResults table {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+#searchResults table td {
+  font-size: 2rem;
+  padding: 2rem 0rem;
+}
+
+#searchResults h2 {
+  text-align: center;
 }
 
 /*Mobile Responsiveness

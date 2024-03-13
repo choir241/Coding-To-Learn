@@ -31,14 +31,17 @@ function updateSearchSuggests(
       });
     })
     .flat()
-    .slice(0, 10);
+    .slice(0, 6);
 
   return results;
 }
 
 export default function SearchSuggest(props: SearchValue) {
   return props.searchValue ? (
-    <section className={`${style.flex} ${style.column} ${style.alignCenter}`}>
+    <section
+      id="suggest"
+      className={`${style.flex} ${style.column} ${style.alignCenter}`}
+    >
       {" "}
       {updateSearchSuggests(props.searchValue, (e: string) =>
         props.setSearchValue(e),
