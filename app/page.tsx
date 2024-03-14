@@ -1,26 +1,43 @@
-import React from "react"
+import React from "react";
 import style from "../css/main.module.css";
+import { ButtonLink, ButtonElement } from "../components/Button";
 
-export default function LandingPage(){
-    return(
-        <main id = "main">
-            <h1>Learn How To Code</h1>
+export default function LandingPage() {
+  const links = [
+    { text: <h3>100 Devs</h3>, href: "/100_Devs" },
+    { text: <h3>Odin Project</h3>, href: "/Odin_Project" },
+    { text: <h3>Free Code Camp</h3>, href: "/Free_Code_Camp" },
+  ];
 
-            <section>
-                <h2>New To Coding?</h2>
+  return (
+    <main id="main">
+      <h1>Learn How To Code</h1>
 
-                <section className = {`${style.course} ${style.flex} ${style.justifyBetween}`}>
-                    <button><h3>100 Devs</h3></button>
-                    
-                    <button><h3>Odin Project</h3></button>
+      <h2>New To Coding?</h2>
 
-                    <button><h3>Free Code Camp</h3></button>                    
-                </section>
-            </section>
+      <section
+        className={`${style.course} ${style.flex} ${style.justifyBetween}`}
+      >
+        {links.map((button: ButtonElement) => {
+          const text = button.text;
+          const href = button.href;
+          return ButtonLink({
+            text: text,
+            href: href,
+            key: href,
+          });
+        })}
+      </section>
 
-            <section className = {`${style.flex} ${style.alignCenter}`}>
-                <h2>Learn Code Languages</h2> <button className = {style.arrow}>&rarr;</button>
-            </section>
-        </main>
-    )
+      {ButtonLink({
+        href: "/Coding_Languages",
+        text: (
+          <section className={`${style.flex} ${style.alignCenter}`}>
+            <h2>Learn Code Languages</h2>
+            <i className={style.arrow}>&rarr;</i>
+          </section>
+        ),
+      })}
+    </main>
+  );
 }

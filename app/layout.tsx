@@ -6,17 +6,24 @@ import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/300.css";
 import "../css/global.css";
 import "../css/mobile.css";
+import Header from "../components/Header";
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-
   return (
     <html lang="en">
-      <title>Learn How To Code</title>
-        <body>{children}</body>
+      <head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Learn How To Code</title>
+      </head>
+      <body>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }

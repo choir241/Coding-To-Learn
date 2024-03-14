@@ -2,86 +2,186 @@
 ========================================================================== */
 
 .flex {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.row {
+  flex-direction: row;
+}
+
+/*JustifyContent
+========================================================================== */
+
+.justifyCenter {
+  justify-content: center;
+}
+
+.justifyEnd {
+  justify-content: flex-end;
+}
+
+.justifyStart {
+  justify-content: flex-start;
+}
+
+.justifyBetween {
+  justify-content: space-between;
+}
+
+.justifyAround {
+  justify-content: space-around;
+}
+
+.justifyEvenly {
+  justify-content: space-evenly;
+}
+
+/*AlignItems
+========================================================================== */
+
+.alignCenter {
+  align-items: center;
+}
+
+.alignEnd {
+  align-items: flex-end;
+}
+
+.alignStart {
+  align-items: flex-start;
+}
+
+/*Landing Page
+========================================================================== */
+
+.arrow {
+  color: black;
+  margin-left: 1rem;
+  background: none;
+  border: none;
+  font-size: 5rem;
+}
+
+.course {
+  margin-bottom: 5wrem;
+}
+
+.course a {
+  text-align: center;
+  min-height: 12rem;
+  min-width: 15rem;
+  width: 25rem;
+  background: #358aa0;
+  border: none;
+  border-radius: 5px;
+}
+
+/*100Devs
+========================================================================== */
+
+.button {
+  background: #22a9ca;
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+}
+
+/*Languages
+========================================================================== */
+
+.colorRow {
+  background-color: rgba(220, 220, 220, 0.25);
+}
+
+.btnContainer {
+  width: 100%;
+  padding-bottom: 2rem;
+}
+
+/*LanguageHeader
+========================================================================== */
+
+.header {
+  padding-top: 2rem;
+  left: -1rem;
+  background: rgba(220, 220, 220, 0.25);
+  position: fixed;
+  z-index: 1;
+  padding-right: 4rem;
+}
+
+.header,
+.header nav,
+.header ul {
+  height: 100%;
+}
+
+.header nav li a {
+  font-size: 1.777rem;
+}
+
+/*Mobile Responsive
+========================================================================== */
+
+@media (max-width: 800px) {
+  .course {
+    flex-direction: column;
+    align-items: center;
+    min-height: 50rem;
+  }
+
+  .button {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .menu {
     display: flex;
   }
-  
-  .column {
+
+  .nav {
     flex-direction: column;
   }
-  
-  .row {
-    flex-direction: row;
-  }
-  
-  /*JustifyContent
-  ========================================================================== */
-  
-  .justifyCenter {
-    justify-content: center;
-  }
-  
-  .justifyEnd {
-    justify-content: flex-end;
-  }
-  
-  .justifyStart {
-    justify-content: flex-start;
-  }
-  
-  .justifyBetween {
-    justify-content: space-between;
-  }
-  
-  .justifyAround {
-    justify-content: space-around;
-  }
-  
-  .justifyEvenly {
-    justify-content: space-evenly;
-  }
-  
-  /*AlignItems
-  ========================================================================== */
-  
-  .alignCenter {
-    align-items: center;
-  }
-  
-  .alignEnd {
-    align-items: flex-end;
-  }
-  
-  .alignStart {
-    align-items: flex-start;
+}
+
+@media (max-width: 1500px) {
+  .headContainer,
+  .btnContainer {
+    width: 100%;
   }
 
-  /*Landing Page
-  ========================================================================== */
-  
-  .arrow{
-    margin-left: 1rem;
+  .header li {
+    margin-bottom: 1rem;
+  }
+
+  .header {
+    position: relative;
     background: none;
-    border: none;
-    font-size: 5rem;  
   }
 
-  .course button{
-    min-height: 12rem;
-    min-width: 15rem;
-    width: 25rem;
-    background: #358AA0;
-    border: none;
-    border-radius: 5px;
+  .header,
+  .header nav,
+  .header ul {
+    height: auto;
+    width: 100%;
   }
+}
 
+/*Menu
+========================================================================== */
 
-  /*Mobile Responsive
-  ========================================================================== */
-  
-  @media (max-width: 800px) {
-    .course{
-      flex-direction: column;
-      align-items: center;
-      min-height: 50rem;
-    }
-  }
+.hidden,
+.menu {
+  display: none;
+}
+
+.show {
+  font-size: 2.5rem;
+  display: flex;
+}
