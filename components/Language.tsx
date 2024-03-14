@@ -1,5 +1,8 @@
+"use client";
 import style from "../css/main.module.css";
 import { ButtonLink } from "./Button";
+import Pagination from "./Pagination";
+import { useState } from "react";
 
 interface Resource {
   name: string;
@@ -13,6 +16,10 @@ interface LanguageElement {
 }
 
 export default function Language(props: LanguageElement) {
+  const rowsPerPage = 4;
+  const startIndex = 0;
+  const [endIndex, setEndIndex] = useState(4);
+
   return (
     <main
       id="language"
@@ -33,32 +40,42 @@ export default function Language(props: LanguageElement) {
           </tr>
         </thead>
         <tbody>
-          {props?.resources?.map((resource: Resource, i: number) => {
-            return (
-              <tr
-                key={`${resource.name} ${resource.href}`}
-                className={i % 2 == 0 ? style.colorRow : ""}
-              >
-                <td>
-                  <h6>{resource.name}</h6>
-                </td>
-                <td>
-                  {ButtonLink({
-                    href: resource.href,
-                    text: "Link",
-                    classNames: style.button,
-                  })}
-                </td>
-              </tr>
-            );
-          })}
+          {props?.resources
+            ?.map((resource: Resource, i: number) => {
+              return (
+                <tr
+                  key={`${resource.name} ${resource.href}`}
+                  className={i % 2 == 0 ? style.colorRow : ""}
+                >
+                  <td>
+                    <h6>{resource.name}</h6>
+                  </td>
+                  <td>
+                    {ButtonLink({
+                      href: resource.href,
+                      text: "Link",
+                      classNames: style.button,
+                    })}
+                  </td>
+                </tr>
+              );
+            })
+            .slice(startIndex, endIndex)}
         </tbody>
       </table>
 
       <div
         className={`${style.flex} ${style.justifyCenter} ${style.btnContainer}`}
       >
-        <button className={style.button}>See More</button>
+        {endIndex >= props?.resources?.length ? (
+          ""
+        ) : (
+          <Pagination
+            rowsPerPage={rowsPerPage}
+            setEndIndex={(e: number) => setEndIndex(e)}
+            endIndex={endIndex}
+          />
+        )}
       </div>
     </main>
   );

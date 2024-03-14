@@ -5,7 +5,6 @@ import { Action } from "../states/ZustandTypes";
 import { useRouter } from "next/navigation";
 import SearchSuggest from "./SearchSuggest";
 import { updateSearchResults } from "./UpdateSearchResults";
-import { CiSearch } from "react-icons/ci";
 import style from "../css/main.module.css";
 import search_icon from "../assets/search-icon.png";
 

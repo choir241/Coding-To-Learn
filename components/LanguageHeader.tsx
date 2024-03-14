@@ -1,5 +1,7 @@
+"use client";
 import style from "../css/main.module.css";
 import { ButtonLink, ButtonElement } from "./Button";
+import Search from "./Search";
 
 export default function LanguageHeader() {
   const links = [
@@ -26,6 +28,9 @@ export default function LanguageHeader() {
             );
           })}
         </ul>
+        <section className={`${style.flex} ${style.justifyEnd}`}>
+          <Search />
+        </section>
       </nav>
     </header>
   );

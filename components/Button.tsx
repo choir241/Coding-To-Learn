@@ -15,3 +15,22 @@ export function ButtonLink(props: ButtonElement) {
     </a>
   );
 }
+
+export interface ButtonInterface {
+  onClick: () => void;
+  text: string;
+  key?: string;
+  classNames?: string;
+}
+
+export function Button(props: ButtonInterface) {
+  return (
+    <button
+      onClick={props.onClick}
+      key={props.key}
+      className={props.classNames}
+    >
+      {props.text}
+    </button>
+  );
+}
