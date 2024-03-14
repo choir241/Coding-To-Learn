@@ -11,7 +11,7 @@ export default function LandingPage() {
 
   return (
     <main id="main">
-      <h1>Learn How To Code</h1>
+      <h1>Coding To Learn</h1>
 
       <h2>New To Coding?</h2>
 
