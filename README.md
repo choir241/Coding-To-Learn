@@ -8,7 +8,6 @@
 
 <div align = "center"><a href = "https://codingtolearn.netlify.app/">Check out the website!</a></div>
 
-
 ## How It's Made: Tech used: Next, TypeScript, React, JavaScript, CSS
 
 ## Optimizations:
