@@ -95,6 +95,21 @@ header {
   padding: 1rem 2rem 0rem 1rem;
 }
 
+header button {
+  border: none;
+  background: none;
+  padding: none;
+  margin: none;
+}
+
+.langBtn {
+  font-size: 2.369rem;
+  text-align: left;
+}
+
+svg {
+  font-size: 2.5rem;
+}
 /*Intro to Classes
 ========================================================================== */
 
@@ -137,10 +152,10 @@ header {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-  min-width: 60%;
   margin: 0 4rem 2rem 0;
   padding: 0;
   border: 0;
+  width: 100%;
   vertical-align: baseline;
 }
 
@@ -163,6 +178,9 @@ table tbody tr {
   border: solid 1px #eeeeee;
   border-left: 0;
   border-right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 table tbody td {
@@ -173,7 +191,6 @@ table tbody td {
 ========================================================================== */
 
 #language {
-  width: 100%;
   position: relative;
 }
 
@@ -190,6 +207,10 @@ table tbody td {
 
 svg:hover {
   cursor: pointer;
+}
+
+#language section {
+  width: 100%;
 }
 
 /*Search
@@ -213,7 +234,8 @@ svg:hover {
 #search button {
   background: none;
   border: none;
-  min-width: 20%;
+  width: 10%;
+  margin-left: 2rem;
 }
 
 #suggest button {
@@ -223,7 +245,7 @@ svg:hover {
 }
 
 #search .searchBtn {
-  width: 50%;
+  width: 100%;
 }
 
 .searchBar {
@@ -243,7 +265,6 @@ svg:hover {
 
 #searchResults table {
   margin-top: 2rem;
-  width: 100%;
 }
 
 #searchResults table td {

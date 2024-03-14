@@ -6,8 +6,6 @@ import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/300.css";
 import "../css/global.css";
 import "../css/mobile.css";
-import Search from "../components/Search";
-import style from "../css/main.module.css";
 import Header from "../components/Header";
 
 export default function RootLayout({

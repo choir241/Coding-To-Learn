@@ -5,7 +5,6 @@ import Search from "./Search";
 
 export default function LanguageHeader() {
   const links = [
-    { text: "Home", href: "/" },
     { text: "C#", href: "/languages/C" },
     { text: "Java", href: "/languages/Java" },
     { text: "PHP", href: "/languages/PHP" },
@@ -17,21 +16,14 @@ export default function LanguageHeader() {
   ];
 
   return (
-    <header className={style.header}>
-      <nav>
-        <ul className={`${style.flex} ${style.column} ${style.justifyBetween}`}>
-          {links.map((lang: ButtonElement) => {
-            return (
-              <li key={lang.href}>
-                {ButtonLink({ text: lang.text, href: lang.href })}
-              </li>
-            );
-          })}
-        </ul>
-        <section className={`${style.flex} ${style.justifyEnd}`}>
-          <Search />
-        </section>
-      </nav>
-    </header>
+    <ul className={`${style.flex} ${style.justifyBetween}`}>
+      {links.map((lang: ButtonElement) => {
+        return (
+          <li key={lang.href}>
+            {ButtonLink({ text: lang.text, href: lang.href })}
+          </li>
+        );
+      })}
+    </ul>
   );
 }

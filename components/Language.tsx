@@ -25,45 +25,44 @@ export default function Language(props: LanguageElement) {
       id="language"
       className={`${style.flex} ${style.column} ${style.alignEnd}`}
     >
-      <div className={style.headContainer}>
-        <h1>{props.h1}</h1>
-      </div>
+      <h1>{props.h1}</h1>
 
       {props?.text ? <p>{props.text}</p> : ""}
 
-      <table>
-        <thead>
-          <tr>
-            <td>
-              <h2>Resource</h2>
-            </td>
-          </tr>
-        </thead>
-        <tbody>
-          {props?.resources
-            ?.map((resource: Resource, i: number) => {
-              return (
-                <tr
-                  key={`${resource.name} ${resource.href}`}
-                  className={i % 2 == 0 ? style.colorRow : ""}
-                >
-                  <td>
-                    <h6>{resource.name}</h6>
-                  </td>
-                  <td>
-                    {ButtonLink({
-                      href: resource.href,
-                      text: "Link",
-                      classNames: style.button,
-                    })}
-                  </td>
-                </tr>
-              );
-            })
-            .slice(startIndex, endIndex)}
-        </tbody>
-      </table>
-
+      <section>
+        <table>
+          <thead>
+            <tr>
+              <td>
+                <h2>Resource</h2>
+              </td>
+            </tr>
+          </thead>
+          <tbody>
+            {props?.resources
+              ?.map((resource: Resource, i: number) => {
+                return (
+                  <tr
+                    key={`${resource.name} ${resource.href}`}
+                    className={i % 2 == 0 ? style.colorRow : ""}
+                  >
+                    <td>
+                      <h6>{resource.name}</h6>
+                    </td>
+                    <td>
+                      {ButtonLink({
+                        href: resource.href,
+                        text: "Link",
+                        classNames: style.button,
+                      })}
+                    </td>
+                  </tr>
+                );
+              })
+              .slice(startIndex, endIndex)}
+          </tbody>
+        </table>
+      </section>
       <div
         className={`${style.flex} ${style.justifyCenter} ${style.btnContainer}`}
       >
