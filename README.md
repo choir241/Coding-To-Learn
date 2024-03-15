@@ -25,7 +25,7 @@ I should have planned out my project tasks better, there were certain tasks like
 ## 2 Week Project Challenge Journey
 
 <ol>
-<li>Day 14: -link here -</li>
+<li>Day 14: https://www.linkedin.com/posts/richard-choir_2weekchallenge-100daysofcodechallenge-design-activity-7174180874605727745-RPM8?utm_source=share&utm_medium=member_desktop</li>
 <li>Day 13: https://www.linkedin.com/posts/richard-choir_nonprofit-2weekchallenge-100daysofcode-activity-7173821607457570818-Krg1?utm_source=share&utm_medium=member_desktop</li>
 <li>Day 12: https://www.linkedin.com/posts/richard-choir_coding-100daysofcode-2weekproject-activity-7173429320873414656-ytAk?utm_source=share&utm_medium=member_desktop</li>
 <li>Day 11: https://www.linkedin.com/posts/richard-choir_join-us-as-we-have-presentations-on-how-usage-activity-7173400147639390208-L-_U?utm_source=share&utm_medium=member_desktop</li>
